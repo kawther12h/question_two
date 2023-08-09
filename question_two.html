@@ -1,76 +1,215 @@
 <!DOCTYPE html>
 <html>
- 
-<head>
-    <title>Signup Form</title>
-   
-</head>
-<body>
-    <form onsubmit="return submitForm()">
-        <label for="firstName & lastName">First Name:</label>
-        <input type="text" id="firstName" required>
+<div class="container">  
+    <body>
+    <form id="contact" action="" method="post">
+      <h3><b> Sign Up Form Example</b></h3>
+      
+      <label>
+        <input placeholder="First name" type="text" id="firstName" required>
+      </label>
 
-        <label>Last Name:</label>
-        <input type="text" id="lastName" required><br>
+      <label>
+        <input placeholder="Last name" type="text" id="lastName" required>
+      </label>
 
-        <label for="organization">Organization:</label>
-        <input type="text" id="organization"><br>
+      <label>
+        <input placeholder="Orgnization" type="text" id="organization" >
+      </label>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required><br>
+      <label>
+        <input placeholder="Your Email Address" type="email" id="email" required>
+      </label>
 
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber"><br>
+      <label>
+        <input placeholder="Phone Number" type="tel" id="phoneNumber" required>
+      </label>
 
-        <label for="workPhone">Work Phone:</label>
-        <input type="tel" id="workPhone"><br>
+        <label>
+        <input placeholder="Work Phone" type="tel" tid="workPhone">
+      </label>
 
-        <label for="homePhone">Home Phone:</label>
-        <input type="tel" id="homePhone"><br>
+        <label>
+        <input placeholder="Home Phone" type="tel" id="homePhone">
+      </label>
 
-        <label for="fax">Fax:</label>
-        <input type="tel" id="fax"><br>
+      <label>
+        <input placeholder="Fax" type="tel" id="fax">
+      </label>
 
-        <label for="address1">Address 1:</label>
-        <input type="text" id="address1" required><br>
+      <label>
+        <input placeholder="Cell Phone" type="tel" id="cellPhone">
+      </label>
 
-        <label for="address2">Address 2:</label>
-        <input type="text" id="address2"><br>
+      <label>
+        <input placeholder="Address 1" type="text"id="address1" required>
+      </label>
 
-        <label for="city">City:</label>
-        <input type="text" id="city" required><br>
+      label>
+        <input placeholder="Address 2" type="text" id="address2">
+      </label>
+       
+      <label>
+        <input placeholder="City" type="text" id="city" required>
+      </label>
 
-        <label for="state">State:</label>
-        <input type="text" id="state"><br>
+      <label>
+        <input placeholder="State postion" type="text" id="state">
+      </label>
 
-        <label for="zipCode">Zip Code:</label>
-        <input type="text" id="zipCode"><br>
+      <label>
+        <input placeholder="Zip Code" type="int" id="zipCode">
+      </label>
 
-        <label for="country">Country:</label>
-        <input type="text" id="country"><br>
-
-        <input type="submit" value="Submit">
+      <label>
+        <input placeholder="Country" type="text" id="country" required>
+      </label>
+      
+      
+      <input type="button" onclick="submitForm()" value="Submit">      
+      
     </form>
-    <script>
-        function submitForm() {
-          
-            var firstName = document.getElementById("firstName").value;
-            var lastName = document.getElementById("lastName").value;
-            var email = document.getElementById("email").value;
-            var address1 = document.getElementById("address1").value;
-            var city = document.getElementById("city").value;
-
-            // Perform form validation
-            if (firstName === "" || lastName === "" || email === "" || address1 === "" || city === "") {
-                alert("Please fill in all required fields.");
-                return false;
-            }
-
-            // Display success message
-            var message = "Congratulations " + firstName + " " + lastName + "! You are now signed up!";
-            alert(message);
-            return true;
-        }
-    </script>
-</body>
+ </body>
 </html>
+  </div>
+  
+  <style>
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #f1e3fa;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  color: #888
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #6c4b82;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #6c4b82;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+  </style>
+  <script>
+    function submitForm() {
+      
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var address1 = document.getElementById("address1").value;
+        var city = document.getElementById("city").value;
+
+        if (firstName === "" || lastName === "" || email === "" || address1 === "" || city === "") {
+            alert("Please fill in all required fields.");
+            return false;
+        }
+
+        var message = "Congratulations " + firstName + " " + lastName + "! You are now signed up!";
+        alert(message);
+        return true;
+    }
+</script>
